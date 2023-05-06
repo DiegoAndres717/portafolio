@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +5,12 @@ import React from "react";
 
 function about() {
   return (
-    <Layout title="About" description={"About for me"} rel={'preload'} as={'video'} href={'https://www.dropbox.com/s/x9xf4s9o0qp081i/video-about.mp4?dl=1"'}>
+    <Layout
+      title="About"
+      description={"About for me"}
+      rel={"icon"}
+      href={"/logo.png"}
+    >
       <video
         autoPlay
         loop
@@ -22,7 +26,7 @@ function about() {
           type="video/webm"
         />
       </video>
-      <div className="flex items-center justify-center flex-col mt-20 w-full h-full">
+      <div className="flex items-center justify-center flex-col sm:mt-2 mt-20 w-full h-full">
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <Image

@@ -57,7 +57,7 @@ function Layout({ children, title, description, rel, href, as }) {
             className="items-center justify-between w-full md:flex md:w-auto md:order-1"
             id="navbar-cta"
           >
-            <ul className={`${!isOpen ? '' : 'hidden'} ms:absolute sm:w-full sm:left-0 flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white`}>
+            <ul className={`${!isOpen ? 'absolute w-full left-0 flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:items-center md:justify-center md:space-x-8 md:mt-0 md:border-0 md:bg-opacity-0' : 'hidden'} `}>
               <li>
                 <Link
                   href="/"
