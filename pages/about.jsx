@@ -26,7 +26,7 @@ function about() {
           type="video/webm"
         />
       </video>
-      <div className="flex items-center justify-center flex-col sm:mt-2 mt-20 w-full h-full">
+      <div className="flex items-center justify-center flex-col mt-20 w-full h-full">
         <div className="card w-96 bg-base-100 shadow-xl">
           <figure className="px-10 pt-10">
             <Image

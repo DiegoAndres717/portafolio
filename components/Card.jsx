@@ -2,15 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Card = ({onCardClick}) => {
+const Card = ({ onCardClick }) => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center h-screen space-y-4 space-x-4">
+    <div
+      className="grid grid-cols-1 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-center 
+    items-center xs:h-screen xl:h-screen mx-auto max-w-xs xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md
+     sm:max-w-screen-sm"
+    >
       {cards.map((card) => (
         <Link
           onClick={onCardClick}
           key={card.img}
           href="#"
-          className="h-60 w-50 block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
+          className="h-60 w-42 block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
         >
           <h5 className="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {card.title}

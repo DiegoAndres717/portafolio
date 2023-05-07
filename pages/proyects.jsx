@@ -12,7 +12,7 @@ function Proyects() {
       rel={"icon"}
       href={"/logo.png"}
     >
-      <div className="bg-gradient-to-b from-gray-900 to-gray-800">
+      <div className="bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen"> 
         <Card onCardClick={() => setIsModalOpen(true)} />
         <Proyecto
           isModalOpen={isModalOpen}
