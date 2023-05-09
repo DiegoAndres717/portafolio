@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const CardProyect = (props) => {
-  console.log(props)
+const CardProyect = ({proyectos}) => {
+  const min = 0;
+  const max = 0;
   return (
     <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-        {cards.map((card) => (
-            <div className="card-proyect" key={card?.img}>
+        {proyectos?.map((card, index) => (
+            <div className="card-proyect" key={index}>
             <div className="header">
               <h2 className="text-blue-700 font-bold">{card.title}</h2>
               <Image
@@ -47,18 +48,5 @@ const CardProyect = (props) => {
     </div>
   );
 };
-const cards = [];
-cards.push({
-  title: "Calendario FR",
-  img: "https://www.dropbox.com/s/q4qtqdx15arm48f/calendario.png?dl=1",
-  w: "400",
-  h: "400",
-});
-cards.push({
-  title: "App Movies",
-  img: "https://www.dropbox.com/s/vodd4w6ed4xk9u6/app_movies.png?dl=1",
-  w: "400",
-  h: "400",
-});
 
 export default CardProyect;
