@@ -81,7 +81,7 @@ const Card = ({ onCardClick }) => {
             src="/nodejs-2.svg"
             width={130}
             height={150}
-            alt="JavaScript"
+            alt="NodeJS"
           />
         </figure>
       </div>

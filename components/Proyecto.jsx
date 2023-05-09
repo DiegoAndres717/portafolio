@@ -1,6 +1,6 @@
 import React from "react";
 import CardProyect from "./CardProyect";
-import { proyectosSvelte, proyectosJavaScript, proyectosReact, proyectosNextjs, CARD_STATUS } from "@/functions/cards";
+import { proyectosSvelte, proyectosJavaScript, proyectosReact, proyectosNextjs, CARD_STATUS, proyectosNode } from "@/functions/cards";
 
 function Proyecto({ isModalOpen, onClose, selectedProject }) {
   if (!isModalOpen) return null;
@@ -13,6 +13,8 @@ function Proyecto({ isModalOpen, onClose, selectedProject }) {
       return proyectosSvelte;
     } else if (selectedProject === CARD_STATUS.JavaScript) {
       return proyectosJavaScript;
+    } else if (selectedProject === CARD_STATUS.Node) {
+      return proyectosNode;
     }
     return [];
   };
@@ -29,7 +31,7 @@ function Proyecto({ isModalOpen, onClose, selectedProject }) {
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className="bg-white p-8 rounded-lg shadow-lg text-center"
+          className="bg-slate-100 p-8 rounded-lg shadow-lg text-center"
         >
           <CardProyect proyectos={proyectos} />
         </div>
