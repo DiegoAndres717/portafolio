@@ -18,7 +18,7 @@ export const proyectosNextjs = [
   ];
 export const proyectosJavaScript = [
     { title: "App Movies", img: "/movies.png", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/api-rest-javascript', urlPage: 'https://aesthetic-figolla-dcb15b.netlify.app/'},
-    { title: "FreeLancer", img: "/freelancer.png", w: 400, h: 400, urlGit: '', urlPage: 'https://app.netlify.com/sites/webdiego'},
+    { title: "FreeLancer", img: "/lancer.png", w: 400, h: 400, urlGit: '', urlPage: 'https://app.netlify.com/sites/webdiego'},
 ]
 export const proyectosSvelte = [
     { title: "Castagram", img: "/castagram.webp", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/Castagram-svelte', urlPage: 'https://castagram-cat.netlify.app/'},
