@@ -3,6 +3,7 @@ import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Footer from "@/components/Footer";
 
 function Home() {
   const [message1, setMessage1] = useState("");
@@ -100,6 +101,7 @@ function Home() {
           </Link>
         </div>
       </div>
+      <Footer />
     </Navbar>
   );
 }
