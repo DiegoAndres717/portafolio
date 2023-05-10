@@ -12,10 +12,11 @@ function Home() {
 
   useEffect(() => {
     const messages1 = [
-      "Hola, como estas, Mi nombre es Diego Andres Salas y soy Fronted Developer",
+      "👋 ¡Bienvenido! Soy Diego Andres Salas, un desarrollador Frontend apasionado.",
     ];
-    const messages2 = ["¿si estas buscando un Fronted Developer?"];
-    const messages3 = ["Puedes ver mis proyectos realizados"];
+    const messages2 = ["¿Necesitas ayuda con tu proyecto web?"];
+    const messages3 = ["🚀 Descubre mis proyectos y habilidades en mi portafolio."];
+    
 
     let index = 0;
 
