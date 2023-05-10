@@ -12,7 +12,7 @@ function Home() {
 
   useEffect(() => {
     const messages1 = [
-      "👋 ¡Bienvenido! Soy Diego Andress Salas, un desarrollador Frontend apasionado.",
+      "👋 ¡Bienvenido! Soy Diego Andress Salas, un desarrollador Frontend apasionado",
     ];
     const messages2 = ["¿Necesitas ayuda con tu proyecto web?"];
     const messages3 = ["🚀 Descubre mis proyectos y habilidades en mi portafolio."];
