@@ -42,13 +42,12 @@ function about() {
               Diego Andress Salas!
             </h2>
             <p className="mb-4 text-sm font-extrabold text-gray-700 dark:text-white md:text-sm lg:text-sm">
-              Soy un profesional en administración de empresas que se enamoró de
-              la programación hace más de dos año. Desde entonces, he estado estudiando
-              diferentes lenguajes y tecnologías como
-              <br />
-              <strong className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-                React, Java, JavaScript, Node, MySQL, MongoDB, Postman, CSS,
-                HTML y Next.js.
+              Soy un profesional en administración de empresas con una pasión
+              por la programación de software. Como técnico en programación de
+              software, he adquirido habilidades en
+              
+              <strong className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 pl-1">
+                React, Next.js, Java, JavaScript, Node, MySQL, MongoDB, Postman, HTML/CSS.
               </strong>
               <br />
               Me encanta aprender y disfruto especialmente enseñando
