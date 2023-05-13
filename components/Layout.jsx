@@ -2,7 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import Footer from "./Footer";
 
 function Layout({ children, title, description, rel, href, as }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +24,7 @@ function Layout({ children, title, description, rel, href, as }) {
           <div className="flex md:order-2">
             <button
               type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 "
             >
               Download CV
             </button>
@@ -33,7 +32,7 @@ function Layout({ children, title, description, rel, href, as }) {
               data-collapse-toggle="navbar-default"
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
               aria-controls="navbar-default"
               aria-expanded="false"
             >
@@ -56,7 +55,7 @@ function Layout({ children, title, description, rel, href, as }) {
           <div
             className={`${!isOpen && 'hidden'} w-full xl:block xl:w-auto`} id="navbar-default"
           >
-            <ul className={`absolute w-full left-0 font-medium xl:relative flex flex-col p-4 xl:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:flex-row xl:space-x-8 xl:mt-0 xl:border-0 xl:bg-white`}>
+            <ul className={`absolute w-full left-0 font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:relative xl:p-0 xl:flex-row xl:space-x-8 xl:mt-0 xl:border-0 xl:bg-white`}>
               <li>
                 <Link
                   href="/"
@@ -78,7 +77,7 @@ function Layout({ children, title, description, rel, href, as }) {
                   About
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/services"
                   className={`${
@@ -87,7 +86,7 @@ function Layout({ children, title, description, rel, href, as }) {
                 >
                   Services
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link
                   href="/proyects"
