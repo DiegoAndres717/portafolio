@@ -9,7 +9,7 @@ export const CARD_STATUS = {
 export const proyectosReact = [
     { title: "Calendario FR", img: "/calendario.webp", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/fr-calendario', urlPage: 'https://fr-calendario.vercel.app/'},
     { title: "Marketplace", img: "/marketplace.webp", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/MARKEPLACE-REACT', urlPage: 'https://markeplace-react.vercel.app/'},
-    { title: "Pacientes Cat", img: "/paciente.png", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/citas-medicas-react', urlPage: 'https://citas-medicas-react.vercel.app/'},
+    { title: "Pacientes Cat", img: "/paciente.webp", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/citas-medicas-react', urlPage: 'https://citas-medicas-react.vercel.app/'},
   ];
   
 export const proyectosNextjs = [
@@ -17,8 +17,8 @@ export const proyectosNextjs = [
     { title: "Pokémon", img: "/pokemon.webp", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/pokemon-next', urlPage: 'https://pokemon-next-lovat.vercel.app/' },
   ];
 export const proyectosJavaScript = [
-    { title: "App Movies", img: "/movies.png", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/api-rest-javascript', urlPage: 'https://aesthetic-figolla-dcb15b.netlify.app/'},
-    { title: "FreeLancer", img: "/lancer.png", w: 400, h: 400, urlGit: '', urlPage: 'https://app.netlify.com/sites/webdiego'},
+    { title: "App Movies", img: "/movies.webp", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/api-rest-javascript', urlPage: 'https://aesthetic-figolla-dcb15b.netlify.app/'},
+    { title: "FreeLancer", img: "/lancer.webp", w: 400, h: 400, urlGit: '', urlPage: 'https://app.netlify.com/sites/webdiego'},
 ]
 export const proyectosSvelte = [
     { title: "Castagram", img: "/castagram.webp", w: 400, h: 400, urlGit: 'https://github.com/DiegoAndres717/Castagram-svelte', urlPage: 'https://castagram-cat.netlify.app/'},

@@ -5,18 +5,20 @@ import { proyectosSvelte, proyectosJavaScript, proyectosReact, proyectosNextjs, 
 function Proyecto({ isModalOpen, onClose, selectedProject }) {
   if (!isModalOpen) return null;
   const getProyectosBySelectedProject = () => {
-    if (selectedProject === CARD_STATUS.React) {
-      return proyectosReact;
-    } else if (selectedProject === CARD_STATUS.Next) {
-      return proyectosNextjs;
-    } else if (selectedProject === CARD_STATUS.Svelte) {
-      return proyectosSvelte;
-    } else if (selectedProject === CARD_STATUS.JavaScript) {
-      return proyectosJavaScript;
-    } else if (selectedProject === CARD_STATUS.Node) {
-      return proyectosNode;
+    switch (selectedProject) {
+      case CARD_STATUS.React:
+        return proyectosReact;
+      case CARD_STATUS.Next:
+        return proyectosNextjs;
+      case CARD_STATUS.Svelte:
+        return proyectosSvelte;
+      case CARD_STATUS.JavaScript:
+        return proyectosJavaScript;
+      case CARD_STATUS.Node:
+        return proyectosNode;
+      default:
+        return [];
     }
-    return [];
   };
 
   const proyectos = getProyectosBySelectedProject();

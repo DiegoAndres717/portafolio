@@ -22,8 +22,8 @@ const CardProyect = ({ proyectos }) => {
           <div className="header">
             <h2 className="text-blue-700 font-bold">{card.title}</h2>
             <Image
-              src={card?.img}
-              alt={card?.title}
+              src={card.img}
+              alt={card.title}
               width={card.w}
               height={card.h}
             />
