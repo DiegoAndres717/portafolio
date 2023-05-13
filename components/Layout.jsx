@@ -9,7 +9,7 @@ function Layout({ children, title, description, rel, href, as }) {
   return (
     <div>
       <Head>
-        <link rel={rel} href={href} as={as}/>
+        <link rel={rel} href={href} as={as} />
         <title>{title}</title>
         <meta name="description" content={description} />
       </Head>
@@ -22,12 +22,13 @@ function Layout({ children, title, description, rel, href, as }) {
             Disa
           </span>
           <div className="flex md:order-2">
-            <button
-              type="button"
+            <Link
+              href={"/Profile.pdf"}
+              target="_blank"
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 "
             >
               Download CV
-            </button>
+            </Link>
             <button
               data-collapse-toggle="navbar-default"
               onClick={() => setIsOpen(!isOpen)}
@@ -51,16 +52,20 @@ function Layout({ children, title, description, rel, href, as }) {
                 />
               </svg>
             </button>
-            </div>
+          </div>
           <div
-            className={`${!isOpen && 'hidden'} w-full xl:block xl:w-auto`} id="navbar-default"
+            className={`${!isOpen && "hidden"} w-full xl:block xl:w-auto`}
+            id="navbar-default"
           >
-            <ul className={`absolute w-full left-0 font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:relative xl:p-0 xl:flex-row xl:space-x-8 xl:mt-0 xl:border-0 xl:bg-white`}>
+            <ul
+              className={`absolute w-full left-0 font-medium flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:relative xl:p-0 xl:flex-row xl:space-x-8 xl:mt-0 xl:border-0 xl:bg-white`}
+            >
               <li>
                 <Link
                   href="/"
                   className={`${
-                    router.route === "/" && "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
+                    router.route === "/" &&
+                    "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                   aria-current="page"
                 >
@@ -71,7 +76,8 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/about"
                   className={`${
-                    router.route === "/about" && "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
+                    router.route === "/about" &&
+                    "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                 >
                   About
@@ -91,7 +97,8 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/proyects"
                   className={`${
-                    router.route === "/proyects" && "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
+                    router.route === "/proyects" &&
+                    "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                 >
                   Proyects
@@ -101,7 +108,8 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/contact"
                   className={`${
-                    router.route === "/contact" && "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
+                    router.route === "/contact" &&
+                    "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                 >
                   Contact
