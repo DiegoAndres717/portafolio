@@ -43,7 +43,7 @@ function about() {
             </h2>
             <p className="mb-4 text-sm font-extrabold text-gray-700 dark:text-white md:text-sm lg:text-sm">
               Soy un profesional en administración de empresas que se enamoró de
-              la programación hace un año. Desde entonces, he estado estudiando
+              la programación hace más de dos año. Desde entonces, he estado estudiando
               diferentes lenguajes y tecnologías como
               <br />
               <strong className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
