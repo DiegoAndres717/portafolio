@@ -87,7 +87,7 @@ function Home() {
             {showMessage === 3 && message3}
             </div>
           </div>
-          <Link href={"/proyects"} className="cssbuttons-io">
+          <Link href={"/proyects"} className="cssbuttons-io bounce-top">
             <span className="relative z-10 inline-flex items-center px-4 py-2 space-x-2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path fill="none" d="M0 0h24v24H0z" />

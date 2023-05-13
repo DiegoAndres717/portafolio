@@ -16,14 +16,6 @@
   animation: circle-out-center 6.5s cubic-bezier(.25, 1, .30, 1) both;
 }
 
-.video-background {
-  background: url('/public/video-about.mp4') no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
 .cssbuttons-io {
   position: relative;
   font-family: inherit;
@@ -43,6 +35,8 @@
   height: 1.2em;
   margin-right: 0.5em;
 }
+.bounce-top{animation:bounce-top .9s both}
+@keyframes bounce-top{0%{transform:translateY(-45px);animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{transform:translateY(-24px);animation-timing-function:ease-in}65%{transform:translateY(-12px);animation-timing-function:ease-in}82%{transform:translateY(-6px);animation-timing-function:ease-in}93%{transform:translateY(-4px);animation-timing-function:ease-in}25%,55%,75%,87%{transform:translateY(0);animation-timing-function:ease-out}100%{transform:translateY(0);animation-timing-function:ease-out;opacity:1}}
 
 .cssbuttons-io span {
   position: relative;
