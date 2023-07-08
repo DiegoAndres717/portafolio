@@ -1,5 +1,4 @@
 import Navbar from "@/components/Layout";
-import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,7 +23,7 @@ function Home() {
     const interval = setInterval(() => {
       switch (showMessage) {
         case 1:
-          setMessage1(
+          setMessage1(    
             (prevText) => prevText + messages1[index].charAt(prevText.length)
           );
           if (message1.length === messages1[index].length) {

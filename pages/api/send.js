@@ -12,14 +12,14 @@ export default async function send(req, res) {
         {
           to: [
             {
-              email: 'diegoandress717@gmail.com', // Reemplaza esto con tu dirección de correo electrónico
+              email: 'diegoandress717@gmail.com', 
             }
           ],
           subject: `Nuevo mensaje de - ${email}`
         }
       ],
       from: {
-        email: 'diegoandress717@outlook.com', // Reemplaza esto con tu dirección de correo electrónico
+        email: 'diegoandress717@outlook.com',
       },
       content: [
         {
