@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-const Card = ({ onCardClick }) => {
+interface CardProps {
+  onCardClick: (project: string) => void;
+}
+
+const Card = ({ onCardClick } : CardProps) => {
   return (
     <div
       className="grid grid-cols-1 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-center 

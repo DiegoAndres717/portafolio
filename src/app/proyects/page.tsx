@@ -1,5 +1,5 @@
 
-import Proyects from '@/pages/proyects';
+import Proyects from '@/pages/Proyects';
 const page = () => {
     return (
         <>

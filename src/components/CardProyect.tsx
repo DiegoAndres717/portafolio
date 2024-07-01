@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const CardProyect = ({ proyectos }) => {
+interface CardProps {
+  proyectos: any;
+}
+const CardProyect = ({ proyectos } : CardProps) => {
   let gridColumns;
 
   if (proyectos.length === 1) {
@@ -14,7 +17,7 @@ const CardProyect = ({ proyectos }) => {
   }
   return (
     <div className={`grid ${gridColumns} gap-4 mb-4`}>
-      {proyectos?.map((card, index) => (
+      {proyectos?.map((card: any, index: number) => (
         <div
           className="card-proyect bg-white rounded-lg hover:border-2 hover:rounded-lg hover:cursor-pointer"
           key={index}
