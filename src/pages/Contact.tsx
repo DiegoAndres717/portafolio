@@ -3,10 +3,17 @@
 import Swal from "sweetalert2";
 
 function Contact() {
-  const handleSubmit = async (event: { preventDefault: () => void; target: { elements: { [x: string]: { value: any; }; }; reset: () => void; }; }) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const email = event.target.elements["email-address-icon"].value;
-    const message = event.target.elements["message"].value;
+    // Casting seguro a HTMLFormElement
+    const form = event.target as HTMLFormElement; 
+
+    // Ahora puedes acceder a form.elements
+    const emailInput = form.elements.namedItem("email-address-icon") as HTMLInputElement | null;
+    const messageTextarea = form.elements.namedItem("message") as HTMLTextAreaElement | null;
+
+    const email = emailInput?.value;
+    const message = messageTextarea?.value;
 
     const response = await fetch("/api/send", {
       method: "POST",
@@ -57,7 +64,7 @@ function Contact() {
         showConfirmButton: false,
       });
     }
-    event.target.reset();
+    /* event.target.reset(); */
   };
   return (
     <>
@@ -119,7 +126,7 @@ function Contact() {
                 </label>
                 <textarea
                   id="message"
-                  rows="6"
+                  rows={6}
                   typeof="email"
                   className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 "
                   placeholder="Leave a comment..."
