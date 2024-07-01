@@ -1,9 +1,9 @@
-import Layout from "@/components/Layout";
-import React from "react";
+'use client'
+
 import Swal from "sweetalert2";
 
 function Contact() {
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: { preventDefault: () => void; target: { elements: { [x: string]: { value: any; }; }; reset: () => void; }; }) => {
     event.preventDefault();
     const email = event.target.elements["email-address-icon"].value;
     const message = event.target.elements["message"].value;
@@ -60,12 +60,7 @@ function Contact() {
     event.target.reset();
   };
   return (
-    <Layout
-      title={"Contact"}
-      description={"Aqui puedes contactarme si necesitas de mis servicios"}
-      rel={"icon"}
-      href={"/logo.png"}
-    >
+    <>
       <div>
         <video
           autoPlay
@@ -142,7 +137,7 @@ function Contact() {
           </form>
         </section>
       </div>
-    </Layout>
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
+'use client';
 import Card from "@/components/Card";
-import Layout from "@/components/Layout";
+/* import Layout from "@/components/Layout"; */
 import Proyecto from "@/components/Proyecto";
 import React, { useState } from "react";
 
@@ -12,12 +13,7 @@ function Proyects() {
     setIsModalOpen(true);
   };
   return (
-    <Layout
-      title={"Proyects"}
-      description={"Estos son mis proyectos, todo mi aprendizaje"}
-      rel={"icon"}
-      href={"/logo.png"}
-    >
+    <>
       <div className="bg-gradient-to-b from-gray-900 to-gray-800 min-h-screen">
       <Card onCardClick={handleCardClick} />
         <Proyecto
@@ -26,7 +22,7 @@ function Proyects() {
           selectedProject={selectedProject}
         />
       </div>
-    </Layout>
+    </>
   );
 }
 

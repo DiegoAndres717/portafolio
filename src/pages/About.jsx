@@ -1,16 +1,11 @@
-import Layout from "@/components/Layout";
+//import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function about() {
+function About() {
   return (
-    <Layout
-      title="About"
-      description={"About for me"}
-      rel={"icon"}
-      href={"/logo.png"}
-    >
+    <>
       <video
         autoPlay
         loop
@@ -131,8 +126,8 @@ function about() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
 
-export default about;
+export default About;

@@ -1,6 +1,6 @@
 {
   "name": "portafolio-diego",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,14 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "daisyui": "^2.51.6",
-    "eslint-config-next": "13.3.4",
+    "eslint-config-next": "^14.2.4",
+    "autoprefixer": "^10.0.1",
     "mongoose": "^7.1.0",
-    "next": "13.3.4",
+    "next": "^14.2.4",
+    "eslint": "^8",
     "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sweetalert2": "^11.7.5",
-    "tailwindcss": "3.3.2"
+    "tailwindcss": "3.3.2",
+    "typescript": "^5.4.5"
   }
 }

@@ -1,4 +1,5 @@
-import Navbar from "@/components/Layout";
+'use client'
+
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -62,9 +63,8 @@ function Home() {
   }, [message1.length, message2.length, message3.length, showMessage]);
 
   return (
-    <Navbar title={'Portafolio'} description={'Este portafolio fue creado con Next.js por Diego Andres Salas'}
-      rel={'icon'} href={'/logo.png'}
-    >
+    
+     <>
       <div
         className={`bg-gradient-to-b from-gray-900 to-gray-800 animate-out-circle-center`}
       >
@@ -101,7 +101,8 @@ function Home() {
         </div>
       </div>
       <Footer />
-    </Navbar>
+    </>
+    /* </Navbar> */
   );
 }
 

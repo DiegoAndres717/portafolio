@@ -1,18 +1,16 @@
-import Head from "next/head";
+'use client';
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
-function Layout({ children, title, description, rel, href, as }) {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const router = useRouter();
+  const pathName = usePathname();
+  console.log(pathName);
   return (
     <div>
-      <Head>
-        <link rel={rel} href={href} as={as} />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-      </Head>
+      {/* Navbar */}
       <nav className="bg-white border-gray-200 dark:bg-gray-900 font-Montserrat sticky top-0 z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <span className="border-2 border-solid rounded-full border-blue-300 self-center text-2xl font-semibold whitespace-nowrap text-blue-400 text-transparent bg-clip-text bg-gradient-to-r from-pink-800 via-blue-900 to-blue-400">
@@ -64,7 +62,7 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/"
                   className={`${
-                    router.route === "/" &&
+                    pathName === "/" &&
                     "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                   aria-current="page"
@@ -76,7 +74,7 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/about"
                   className={`${
-                    router.route === "/about" &&
+                    pathName === "/about" &&
                     "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                 >
@@ -87,7 +85,7 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/services"
                   className={`${
-                    router.route === "/services" && "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
+                    pathName.route === "/services" && "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                 >
                   Services
@@ -97,7 +95,7 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/proyects"
                   className={`${
-                    router.route === "/proyects" &&
+                    pathName === "/proyects" &&
                     "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                 >
@@ -108,7 +106,7 @@ function Layout({ children, title, description, rel, href, as }) {
                 <Link
                   href="/contact"
                   className={`${
-                    router.route === "/contact" &&
+                    pathName === "/contact" &&
                     "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
                   } block py-2 pl-3 pr-4 text-gray-900 rounded xl:bg-transparent xl:p-0 xl:hover:text-blue-700`}
                 >
@@ -119,13 +117,9 @@ function Layout({ children, title, description, rel, href, as }) {
           </div>
         </div>
       </nav>
-      <main>{children}</main>
     </div>
   );
 }
-Layout.defaultProps = {
-  title: "Diego Andres Salas",
-  description: "Portafolio de Diego Andres Salas como desarrollador fronted",
-};
 
-export default Layout;
+
+export default Header;
