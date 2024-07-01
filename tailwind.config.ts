@@ -1,9 +1,10 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/components/quizzes/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     fontFamily: { 
@@ -24,7 +25,7 @@ module.exports = {
         'primary-font': '#1B2937',
       },
       backgroundColor: theme => ({
-        ...theme('colors'),
+        /* ...theme('colors'), */
         primary: '#CC2D4A',
         secondary: '#8FA206',
         terciary: '#61AEC9',
@@ -68,12 +69,13 @@ module.exports = {
         // Complex site-specific column configuration
         'footer': '200px minmax(900px, 1fr) 100px',
       },
-      animation: {
+      /* animation: {
         'waving-hand': 'wave 2s linear infinite',
-      },
+      }, */
 
     },
     
   },
   plugins: [require("daisyui")]
 }
+export default config;

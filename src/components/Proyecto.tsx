@@ -2,7 +2,13 @@ import React from "react";
 import CardProyect from "./CardProyect";
 import { proyectosSvelte, proyectosJavaScript, proyectosReact, proyectosNextjs, CARD_STATUS, proyectosNode } from "@/functions/cards";
 
-function Proyecto({ isModalOpen, onClose, selectedProject }) {
+
+interface Props {
+  isModalOpen: boolean;
+  onClose: () => void;
+  selectedProject: typeof CARD_STATUS[keyof typeof CARD_STATUS] | null;
+}
+function Proyecto({ isModalOpen, onClose, selectedProject } : Props) {
   if (!isModalOpen) return null;
   const getProyectosBySelectedProject = () => {
     switch (selectedProject) {
@@ -27,7 +33,7 @@ function Proyecto({ isModalOpen, onClose, selectedProject }) {
     <div>
       <input type="checkbox" id="my-modal" />
       <div
-        htmlFor="my-modal"
+        id="my-modal"
         onClick={onClose}
         className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
       >
