@@ -8,7 +8,7 @@ function Proyects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleCardClick = (project) => {
+  const handleCardClick = (project: any) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
