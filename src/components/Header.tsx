@@ -7,7 +7,7 @@ import React, { useState } from "react";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
-  console.log(pathName);
+  
   return (
     <div>
       {/* Navbar */}
