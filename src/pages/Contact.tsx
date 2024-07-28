@@ -19,7 +19,7 @@ function Contact() {
       )
       .then(
         () => {
-          console.log('SUCCESS!');
+         
           Swal.fire({
             icon: "success",
             title: "Éxito",
@@ -28,7 +28,7 @@ function Contact() {
           });
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          
           Swal.fire({
             icon: "error",
             title: "Error",

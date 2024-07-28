@@ -104,7 +104,7 @@ function Header() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/DiegoSalas"
                   className={`${
                     pathName === "/contact" &&
                     "xl:text-blue-700 xl:bg-white bg-blue-700 text-white xl:hover:text-blue-500"
