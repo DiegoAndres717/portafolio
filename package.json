@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "dotenv -e .env.local -- npx prisma migrate dev",
+    "reset": "dotenv -e .env.local -- npx prisma migrate reset"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -17,13 +19,25 @@
     "daisyui": "^2.51.6",
     "eslint": "^8",
     "eslint-config-next": "^14.2.4",
+    "lucide-react": "^0.401.0",
     "mongoose": "^7.1.0",
     "next": "^14.2.4",
     "postcss": "8.4.23",
     "react": "^18.3.1",
+    "react-datepicker": "^7.2.0",
     "react-dom": "^18.3.1",
+    "sonner": "^1.5.0",
     "sweetalert2": "^11.7.5",
     "tailwindcss": "3.3.2",
+    "tsx": "^4.16.2",
     "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@prisma/client": "^5.16.1",
+    "@types/intl": "^1.2.2",
+    "prisma": "^5.16.1"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.js"
   }
 }

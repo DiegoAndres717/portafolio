@@ -1,0 +1,112 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mysql"
+    url      = env("DB_URL")
+}
+
+enum Status {
+    ACTIVE
+    INACTIVE
+    BOOKED
+}
+
+enum DayOfWeek {
+    MONDAY
+    TUESDAY
+    WEDNESDAY
+    THURSDAY
+    FRIDAY
+    SATURDAY
+    SUNDAY
+}
+
+model Admin {
+    id        Int       @id @default(autoincrement())
+    handle    String    @unique
+    firstName String
+    lastName  String
+    password  String
+    email     String
+    company   String
+    services  Service[]
+    status    Status    @default(ACTIVE)
+    image     String
+    createdAt DateTime  @default(now())
+    updatedAt DateTime  @updatedAt
+
+    @@map("admin")
+}
+
+model Appointment {
+    id          Int      @id @default(autoincrement())
+    name        String
+    email       String
+    comment     String?
+    serviceDate DateTime
+    serviceId   Int
+    service     Service  @relation(fields: [serviceId], references: [id])
+    scheduleId  Int
+    schedule    Schedule @relation(fields: [scheduleId], references: [id])
+    timeId      Int
+    time        Time     @relation(fields: [timeId], references: [id])
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    @@map("appointment")
+}
+
+model Service {
+    id           Int           @id @default(autoincrement())
+    name         String        @unique
+    description  String?
+    status       Status        @default(INACTIVE)
+    schedules    Schedule[]
+    appointments Appointment[]
+    createdAt    DateTime      @default(now())
+    updatedAt    DateTime      @updatedAt
+    adminId      Int?
+    admin        Admin?        @relation(fields: [adminId], references: [id])
+
+    @@map("service")
+}
+
+model Schedule {
+    id        Int     @id @default(autoincrement())
+    service   Service @relation(fields: [serviceId], references: [id])
+    serviceId Int
+
+    dayOfWeek     DayOfWeek
+    scheduleTimes ScheduleTime[]
+    appointments  Appointment[]
+    createdAt     DateTime       @default(now())
+    updatedAt     DateTime       @updatedAt
+
+    @@map("schedule")
+}
+
+model Time {
+    id            Int            @id @default(autoincrement())
+    time          String
+    scheduleTimes ScheduleTime[]
+    appointment   Appointment[]
+
+    @@map("time")
+}
+
+model ScheduleTime {
+    id         Int      @id @default(autoincrement())
+    scheduleId Int
+    schedule   Schedule @relation(fields: [scheduleId], references: [id])
+    timeId     Int
+    time       Time     @relation(fields: [timeId], references: [id])
+    status     Status   @default(INACTIVE)
+    isBooked   Boolean  @default(false)
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+
+    @@map("schedule_time")
+}
