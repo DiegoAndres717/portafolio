@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "migrate": "dotenv -e .env.local -- npx prisma migrate dev",
-    "reset": "dotenv -e .env.local -- npx prisma migrate reset"
+    "reset": "dotenv -e .env.local -- npx prisma migrate reset",
+    "postinstall": "npx prisma generate && npx prisma migrate deploy"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
